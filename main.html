@@ -1,11 +1,28 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<title>cruise</title>
 		<link rel="stylesheet" href="app.css">
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+		<script src="js/jquery-2.1.0.min.js"></script>
 	</head>
 	<body>
 		<div class="page">
 			<h1>cruise</h1>
+			<nav class="sign-module">
+				<ul>
+					<li>
+						Signed in as 
+						<a href="#"><strong>Member</strong></a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fa fa-arrow-right"></i>
+							Sign out
+						</a>
+					</li>
+				</ul>
+			</nav>
 			<div class="wrapper">
 				<section class="main-nav">
 					<nav>
@@ -27,13 +44,115 @@
 				</section>
 				<article>
 					<section class="item">
-						
+						<a class="avatar" href="#">
+							<img src="imgs/avatar.jpg">
+						</a>
+						<div class="title field">
+							<strong>bjstdmngbgr01.throughtworks.com</strong>
+							<div class="info">
+								<span class="separator type">building</span>
+								<span class="separator ip">192.168.0.1</span>
+								<span class="separator dir">/var/lib/cruise-agent</span>
+							</div>
+						</div>
+						<div class="actions field">
+							<a class="add-resources" href="javascript:;">
+								<i class="fa fa-plus"></i>
+								add resources
+							</a>
+							<div class="separator resources">
+								<span>
+									<a href="javascript:;">
+										Solaris
+										<i class="fa fa-times-circle"></i>
+									</a>
+								</span>
+								<span>
+									<a href="javascript:;">
+										chrome
+										<i class="fa fa-times-circle"></i>
+									</a>
+								</span>
+								<span>
+									<a href="javascript:;">
+										ubuntu
+										<i class="fa fa-times-circle"></i>
+									</a>
+								</span>
+							</div>
+						</div>
 					</section>
 					<section class="item">
-						
+						<a class="avatar" href="#">
+							<img src="imgs/avatar.jpg">
+						</a>
+						<div class="title field">
+							<strong>bjstdmngbgr02.throughtworks.com</strong>
+							<div class="info">
+								<span class="separator type">building</span>
+								<span class="separator ip">192.168.0.1</span>
+								<span class="separator dir">/var/lib/cruise-agent</span>
+							</div>
+						</div>
+						<div class="actions field">
+							<a class="add-resources" href="javascript:;">
+								<i class="fa fa-plus"></i>
+								add resources
+							</a>
+							<div class="separator resources">
+								<span>
+									<a href="javascript:;">
+										chrome
+										<i class="fa fa-times-circle"></i>
+									</a>
+								</span>
+								<span>
+									<a href="javascript:;">
+										FreeBSD
+										<i class="fa fa-times-circle"></i>
+									</a>
+								</span>
+								<span>
+									<a href="javascript:;">
+										ubuntu
+										<i class="fa fa-times-circle"></i>
+									</a>
+								</span>
+							</div>
+						</div>
 					</section>
 					<section class="item">
-						
+						<a class="avatar" href="#">
+							<img src="imgs/avatar.jpg">
+						</a>
+						<div class="title field">
+							<strong>bjstdmngbgr03.throughtworks.com</strong>
+							<div class="info">
+								<span class="separator type">building</span>
+								<span class="separator ip">192.168.0.1</span>
+								<span class="separator dir">/var/lib/cruise-agent</span>
+							</div>
+						</div>
+						<div class="actions field">
+							<a class="add-resources" href="javascript:;">
+								<i class="fa fa-plus"></i>
+								add resources
+							</a>
+							<div class="separator resources">
+								<span>
+									<a href="javascript:;">
+										OS X
+										<i class="fa fa-times-circle"></i>
+									</a>
+								</span>
+								<span>
+									<a href="javascript:;">
+										Redhat
+										<i class="fa fa-times-circle"></i>
+									</a>
+								</span>
+							</div>
+						</div>
 					</section>
 				</article>
 				<aside>
@@ -41,7 +160,14 @@
 						<h3>Summary</h3>
 						<div class="content">
 							<table>
-								<td></td>
+								<tr>
+									<td>building</td>
+									<td>ide</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>2</td>
+								</tr>
 							</table>
 						</div>
 					</div>
@@ -76,5 +202,6 @@
 				</aside>
 			</div>
 		</div>
+		<script src="js/app.js"></script>
 	</body>
 </html>
