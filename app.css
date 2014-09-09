@@ -1,0 +1,137 @@
+html, body {
+	font: 12px Helvetica,Arial,sans-serif;
+	line-height: 1.62;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+h1{
+	font-size: 40px;
+}
+
+article, section, aside {
+	display: block;
+}
+
+li {
+	list-style-type: none;
+}
+
+.field {
+	margin-bottom: 10px;
+}
+
+.page{
+	min-width: 500px;
+	width: 90%;
+	margin: 3em auto;	
+}
+
+.wrapper {
+	width: 100%;
+	min-height: 42em;
+	border: 1px solid #999;
+	position: relative;
+}
+
+.nav-bar {
+	padding: 1.2em;
+	height: 3em;
+	background-color: #444;
+}
+
+.nav-bar ul {
+	display: inline-block;
+}
+
+.nav-bar li {
+	display: inline-block;
+	padding: 0 .8em;
+	border: 1px solid #ccc;
+	border-radius: 1em;
+	background: #ccc;
+	margin: 0 .3em;
+	cursor: pointer;
+}
+
+article, aside {
+	min-height: 35em;
+}
+
+article{
+	padding:1em;
+	width: 70%;
+	border-right: 1px solid #999;
+}
+
+aside{
+	width: 26%;
+	position: absolute;
+	left: 72%;
+	top: 5.4em;
+	padding: 1em;
+}
+
+.item {
+	height: 5em;
+	margin: 0 1.2em;
+	padding: 1.2em 3em;
+	border: 0.1em solid #ccc;
+	border-radius: 1em;
+}
+
+section.item+section.item{
+	margin-top: 20px;
+}
+
+.large-font{
+	color: #fff;
+	font-size: 2em;
+}
+
+
+.main-nav {
+	position: absolute;
+	right: 0;
+	top: -3.5em;
+}
+
+.main-nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+.main-nav li {
+	display: inline-block;
+	cursor: pointer;
+	border-radius: 1em;
+	padding: .85em 1.8em;
+	border: 1px solid;
+	border-color: #999 #999 transparent #999;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+li.active {
+	background-color: #eee;
+	font-weight: bold;
+	cursor: default;
+}
+
+aside>div{
+	padding: 0 1.5em;
+}
+
+aside>div>h3 {
+	border-bottom: 1px solid #999; 
+}
+
+
+
