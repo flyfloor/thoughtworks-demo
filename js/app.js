@@ -1,4 +1,4 @@
-
+// Resource
 var Resource = {
 	init: function(value){
 		var dom = '<a href="javascript:;" class="destroy">'+ value 
@@ -19,53 +19,75 @@ var Resource = {
 	}
 }
 
+
+
+// resource module dom
 var resMaker = '<div class="res-module">'
 							+'<div class="content">'
-							+ '<p>separate multiple resources with commas</p>'
+							+ '<p>(separate multiple resources with commas)</p>'
 							+	'<input id="res_collection" class="field" type="text"/>'
 							+ '<input id= "add_btn" type="button" class="btn" value="add"/>'
 							+ '<input id= "cancel_btn" type="button" class="btn" value="cancel"/></div></div>'
 
+
+var closeModule = function(){
+	$(".res-module").remove();
+}
+
+
 $(document).ready(function(){
 
-	// add resources module show
+	// resources module show
 	$(".add-resources").click(function(){
-		var $item = $(this).parents(".item");
-		
+		var $item = $(this).parents(".item");		
 		// siblings initial
-		$(".res-module").remove();
+		closeModule();
 		$(".add-resources").removeClass("on");
-
-		if ($(this).hasClass("on")){
-			$(this).removeClass("on");
-		}else{
+		
+		if (!$(this).hasClass("on")) {
 			$item.append(resMaker);
-			$(this).addClass("on");
 		}
+		$(this).toggleClass("on");
+
 	})
 
-	//add resources module disappear 
+	//resources module disappear 
 	$(document).click(function(event){
+		var $target = $(event.target);
 
-	})
-
-	// remove resources
-	$(document).on("click", ".destroy",function(){
-		// ajax handler
-		$(this).remove();
+		if ($target.is(".res-module") || $target.is(".add-resources") 
+			|| $target.parents(".res-module").length > 0) {
+			event.stopPropagation();
+			return false;
+		}else{
+			closeModule();
+		}
 	})
 
 	// add resources
 	$(document).on("click", "#add_btn",function(){
 		var $token = $("#res_collection");
+
 		if (!!$token.val()) {
+			// when ajax happend here
+
 			dom = Resource.create($token.val(), ",");
 			$(this).parents(".item").find(".resources").append($(dom));
+			$token.val('');
+
+			closeModule();
 		}
-		$token.val('');
 	})
 
-	function closeModule(){
-		
-	}
+	// remove resources
+	$(document).on("click", ".destroy",function(){
+		// when ajax happend here...
+		$(this).remove();
+	})
+
+	// cancle btn handler
+	$(document).on("click", "#cancel_btn", function(){
+		closeModule();
+	})
+
 })

@@ -43,12 +43,21 @@ td {
 	padding-right: 3em;
 }
 
+.btn{
+	margin: 0 .3em;
+	padding: .3em 1em;
+	background-color: #f5f5f5;
+	border: 1px solid #444;
+	border-radius: 10em;
+	cursor: pointer;
+}
+
 .field {
 	margin-bottom: 1em;
 }
 
 .page{
-	min-width: 31em;
+	min-width: 35em;
 	width: 90%;
 	margin: 3em auto;	
 	position: relative;
@@ -62,7 +71,7 @@ td {
 
 .sign-module li {
 	margin-left: 1em;
-	display: inline-block;
+	display: inline;
 }
 
 .wrapper {
@@ -79,11 +88,11 @@ td {
 }
 
 .nav-bar ul {
-	display: inline-block;
+	display: inline;
 }
 
 .nav-bar li {
-	display: inline-block;
+	display: inline;
 	padding: 0 .8em;
 	border: 1px solid #ccc;
 	border-radius: 1em;
@@ -137,7 +146,6 @@ aside>div>h3 {
 }
 
 .item {
-	height: 5em;
 	margin: 0 1.2em;
 	padding: 1.2em 2em;
 	border: 0.1em solid #ccc;
@@ -162,7 +170,7 @@ section.item+section.item{
 .main-nav {
 	position: absolute;
 	right: 0;
-	top: -3.4em;
+	top: -2.4em;
 }
 
 .main-nav ul {
@@ -171,7 +179,7 @@ section.item+section.item{
 }
 
 .main-nav li {
-	display: inline-block;
+	display: inline;
 	cursor: pointer;
 	border-radius: 1em;
 	padding: .85em 1.8em;
@@ -246,6 +254,18 @@ li.active {
 	width: 100%;
 }
 
+@media screen and (max-width: 800px){
+	article{
+		width: 95%;
+		border-right: none;
+		border-bottom: 1px solid #ccc;
+	}
+	aside{
+		position: relative;
+		width: 100%;
+		left: 0;
+	}
+}
 
 
 
